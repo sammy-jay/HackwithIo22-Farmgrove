@@ -34,7 +34,7 @@ In simple terms, this software helps to propagate farmers and local traders prod
 * A simple but beautiful UI for our customers ✔
 * Taking into consideration UX and not building a complex software ✔
 
-## Brief Software Usage
+## Software Run Through
 #### Seller
 * A new trader opens an account as a Seller
 * Well structured information saving using Firebase Cloud Firestore
