@@ -109,7 +109,7 @@ const Cart = () => {
             </div>
             <div className="btn-container">
               <button type="button" className="btn" onClick={() => {}}>
-                Pay with Stripe
+                Pay with Google Pay
               </button>
             </div>
           </div>

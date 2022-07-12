@@ -65,13 +65,17 @@ const App = () => {
   return (
     <div className="bg-gray-100 min-w-[100vw] min-h-[100vh] flex justify-center items-center flex-col">
       <p className="">
-        <span className="text-[#7352FF] font-logo font-bold text-7xl">F</span>
-        <span className="text-[#7352FF] font-logo font-light text-5xl">
+        <span className="text-[#7352FF] font-logo font-bold text-6xl">F</span>
+        <span className="text-[#7352FF] font-logo font-light text-4xl">
           arm
         </span>
-        <span className="text-[#7352FF] font-logo font-bold text-7xl">X</span>
-        <span className="text-[#7352FF] font-logo font-light text-5xl">
-          {" "} now loading...
+        <span className="text-[#7352FF] font-logo font-bold text-6xl">G</span>
+        <span className="text-[#7352FF] font-logo font-light text-4xl">
+          rove
+        </span>
+        <span className="text-[#7352FF] font-logo font-light text-4xl">
+          {" "}
+          now loading...
         </span>
       </p>
     </div>
