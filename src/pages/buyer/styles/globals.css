@@ -431,7 +431,7 @@ span.text-red {
 .small-image {
   border-radius: 8px;
   background-color: #ebebeb;
-  width: 70px;
+  width: 90px;
   height: 70px;
   cursor: pointer;
 }
@@ -666,7 +666,7 @@ span.text-red {
     flex-wrap: wrap;
   }
   .product-detail-container .product-detail-image {
-    width: 350px;
+    width: 450px;
     height: 350px;
   }
   .cart-container {
