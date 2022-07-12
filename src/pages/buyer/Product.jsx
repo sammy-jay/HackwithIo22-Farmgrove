@@ -31,7 +31,7 @@ const ProductDetails = () => {
   
   useEffect(() => {
     setProduct(() => products.find(p => p._id == _id))
-  },[])
+  },[_id, index])
   
   return (
     <div>
