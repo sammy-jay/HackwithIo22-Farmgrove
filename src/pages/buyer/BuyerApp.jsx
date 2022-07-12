@@ -19,7 +19,7 @@ const BuyerApp = () => {
           <Toaster />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/products/:slug" element={<ProductDetails />} />
+            <Route path="/products/:_id" element={<ProductDetails />} />
           </Routes>
         </main>
         <footer>

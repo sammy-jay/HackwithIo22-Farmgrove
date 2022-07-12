@@ -9,75 +9,20 @@ import {
 
 import { Product } from "./components";
 import { useStateContext } from "./context/StateContext";
+import { products } from './lib/utils';
 
-
-const products = [
-  {
-    _id: 1001,
-    name: "Bass Headphones",
-    price: 39,
-    image:
-      "https://cdn.sanity.io/images/kyml1h03/production/a64b345016e96adfb8849af5521c8e0ecfe8f027-555x555.webp",
-    slug: "headphones",
-  },
-  {
-    _id: 1002,
-    name: "Bass Headphones",
-    price: 39,
-    image:
-      "https://cdn.sanity.io/images/kyml1h03/production/a64b345016e96adfb8849af5521c8e0ecfe8f027-555x555.webp",
-    slug: "headphones",
-  },
-  {
-    _id: 1003,
-    name: "Bass Headphones",
-    price: 39,
-    image:
-      "https://cdn.sanity.io/images/kyml1h03/production/a64b345016e96adfb8849af5521c8e0ecfe8f027-555x555.webp",
-    slug: "headphones",
-  },
-  {
-    _id: 1004,
-    name: "Bass Headphones",
-    price: 39,
-    image:
-      "https://cdn.sanity.io/images/kyml1h03/production/a64b345016e96adfb8849af5521c8e0ecfe8f027-555x555.webp",
-    slug: "headphones",
-  },
-  {
-    _id: 1005,
-    name: "Bass Headphones",
-    price: 39,
-    image:
-      "https://cdn.sanity.io/images/kyml1h03/production/a64b345016e96adfb8849af5521c8e0ecfe8f027-555x555.webp",
-    slug: "headphones",
-  },
-];
-
-const product = {
-  _id: 1000,
-  image: [
-    "https://images.pexels.com/photos/533342/pexels-photo-533342.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/144206/pexels-photo-144206.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/872400/pexels-photo-872400.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/4197445/pexels-photo-4197445.jpeg?auto=compress&cs=tinysrgb&w=400",
-  ],
-  slug: "onions",
-  name: "Onions",
-  details:
-    "🌾 🧅 🥕 🥬 👨🏼‍🌾 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam porro quod omnis ducimus provident laborum, id reiciendis perspiciatis fugit, vero, dicta tenetur harum? Doloremque labore dignissimos alias odio quaerat eum.",
-  price: 39,
-};
 
 const ProductDetails = () => {
-  const {slug} = useParams()
-  console.log(slug)
-  const { image, name, details, price } = product;
+  const {_id} = useParams()
+  const { imageList, name, details, price } = products.find(p => p._id === _id);
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
   const handleBuyNow = () => {
-    onAdd(product, qty);
+    onAdd(
+      products.find((p) => p._id === _id),
+      qty
+    );
 
     setShowCart(true);
   };
@@ -86,11 +31,15 @@ const ProductDetails = () => {
     <div>
       <div className="product-detail-container">
         <div>
-          <div className="image-container w-[400px]">
-            <img src={image[index]} alt="" className="product-detail-image" />
+          <div className="image-container w-[450px]">
+            <img
+              src={imageList[index]}
+              alt=""
+              className="product-detail-image"
+            />
           </div>
           <div className="small-images-container">
-            {image?.map((item, i) => (
+            {imageList?.map((item, i) => (
               <img
                 key={i}
                 src={item}
@@ -135,7 +84,12 @@ const ProductDetails = () => {
             <button
               type="button"
               className="add-to-cart"
-              onClick={() => onAdd(product, qty)}
+              onClick={() =>
+                onAdd(
+                  products.find((p) => p._id === _id),
+                  qty
+                )
+              }
             >
               Add to Cart
             </button>

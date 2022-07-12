@@ -63,7 +63,7 @@ const Cart = () => {
                 <div className="item-desc">
                   <div className="flex top">
                     <h5>{item.name}</h5>
-                    <h4>${item.price}</h4>
+                    <h4>₦{item.price}</h4>
                   </div>
                   <div className="flex bottom">
                     <div>

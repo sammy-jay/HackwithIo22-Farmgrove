@@ -33,7 +33,7 @@ const FooterBanner = ({
           </Link>
         </div>
 
-        <img src={image} alt="" className="footer-banner-image" />
+        {/* <img src={image} alt="" className="footer-banner-image" /> */}
       </div>
     </div>
   );
