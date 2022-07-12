@@ -33,7 +33,7 @@ const ProductDetails = () => {
         <div>
           <div className="image-container w-[450px]">
             <img
-              src={imageList[index]}
+              src={imageList && imageList[index]}
               alt=""
               className="product-detail-image"
             />
