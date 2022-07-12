@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {
   AiOutlineMinus,
@@ -14,7 +14,8 @@ import { products } from './lib/utils';
 
 const ProductDetails = () => {
   const {_id} = useParams()
-  const { imageList, name, details, price } = products.find(p => p._id === _id);
+   const [product, setProduct] = useState(null)
+//   const { imageList, name, details, price } = products.find(p => p._id === _id);
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
@@ -26,20 +27,24 @@ const ProductDetails = () => {
 
     setShowCart(true);
   };
-
+  
+  useEffect(() => {
+    setProduct(products.find(p => p._id === _id))
+  }, [])
+  
   return (
     <div>
       <div className="product-detail-container">
         <div>
           <div className="image-container w-[450px]">
             <img
-              src={imageList && imageList[index]}
+              src={product?.imageList[index]}
               alt=""
               className="product-detail-image"
             />
           </div>
           <div className="small-images-container">
-            {imageList?.map((item, i) => (
+            {product?.imageList?.map((item, i) => (
               <img
                 key={i}
                 src={item}
@@ -54,7 +59,7 @@ const ProductDetails = () => {
         </div>
 
         <div className="product-detail-desc">
-          <h1 className="text-2xl font-bold">{name}</h1>
+          <h1 className="text-2xl font-bold">{product?.name}</h1>
           <div className="reviews">
             <div className="flex space-x-[1px]">
               <AiFillStar />
@@ -66,8 +71,8 @@ const ProductDetails = () => {
             <p>(25)</p>
           </div>
           <h4>Details: </h4>
-          <p>{details}</p>
-          <p className="price">₦{price}</p>
+          <p>{product?.details}</p>
+          <p className="price">₦{product?.price}</p>
           <div className="quantity">
             <h3>Quantity:</h3>
             <p className="quantity-desc flex items-center">
@@ -104,7 +109,7 @@ const ProductDetails = () => {
         <h2>You may also like</h2>
         <div className="marquee">
           <div className="maylike-products-container track">
-            {products.map((item) => (
+            {products?.map((item) => (
               <Product key={item._id} product={item} />
             ))}
           </div>
