@@ -57,15 +57,15 @@ const products = [
 const product = {
   _id: 1000,
   image: [
-    "https://cdn.sanity.io/images/kyml1h03/production/a64b345016e96adfb8849af5521c8e0ecfe8f027-555x555.webp",
-    "https://cdn.sanity.io/images/kyml1h03/production/a64b345016e96adfb8849af5521c8e0ecfe8f027-555x555.webp",
-    "https://cdn.sanity.io/images/kyml1h03/production/a64b345016e96adfb8849af5521c8e0ecfe8f027-555x555.webp",
-    "https://cdn.sanity.io/images/kyml1h03/production/a64b345016e96adfb8849af5521c8e0ecfe8f027-555x555.webp",
+    "https://images.pexels.com/photos/533342/pexels-photo-533342.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/144206/pexels-photo-144206.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/872400/pexels-photo-872400.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "https://images.pexels.com/photos/4197445/pexels-photo-4197445.jpeg?auto=compress&cs=tinysrgb&w=400",
   ],
-  slug: "headphones",
-  name: "Headphone",
+  slug: "onions",
+  name: "Onions",
   details:
-    "When your taste in music is so unique, why should your audio wear be any different? Speak your unique style with Rockerz 333 - a bold and powerful wireless earphones for the part of you that wants more. More of sound, more of style, and more of power. Immerse into your jam with boAt Signature Sound and 30 HRS of non stop playback. Let nothing limit your hustle with Dual Pairing that lets you connect two devices at once. Don’t hold back, choose your vibe with Rockerz 333.",
+    "🌾 🧅 🥕 🥬 👨🏼‍🌾 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam porro quod omnis ducimus provident laborum, id reiciendis perspiciatis fugit, vero, dicta tenetur harum? Doloremque labore dignissimos alias odio quaerat eum.",
   price: 39,
 };
 
@@ -105,20 +105,20 @@ const ProductDetails = () => {
         </div>
 
         <div className="product-detail-desc">
-          <h1 className='text-2xl font-bold'>{name}</h1>
+          <h1 className="text-2xl font-bold">{name}</h1>
           <div className="reviews">
-            <div className='flex space-x-[1px]'>
+            <div className="flex space-x-[1px]">
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
               <AiOutlineStar />
             </div>
-            <p>(20)</p>
+            <p>(25)</p>
           </div>
           <h4>Details: </h4>
           <p>{details}</p>
-          <p className="price">${price}</p>
+          <p className="price">₦{price}</p>
           <div className="quantity">
             <h3>Quantity:</h3>
             <p className="quantity-desc flex items-center">
