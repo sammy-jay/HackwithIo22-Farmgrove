@@ -14,6 +14,7 @@ import { products } from './lib/utils';
 
 const ProductDetails = () => {
   const {_id} = useParams()
+  console.log(_id)
    const [product, setProduct] = useState(null)
 //   const { imageList, name, details, price } = products.find(p => p._id === _id);
   const [index, setIndex] = useState(0);
@@ -30,7 +31,7 @@ const ProductDetails = () => {
   
   useEffect(() => {
     setProduct(products.find(p => p._id === _id))
-  }, [])
+  })
   
   return (
     <div>
