@@ -27,7 +27,10 @@ const App = () => {
                   setIsBuyer(true);
                   return;
                 }
-                setIsBuyer(false);
+                else{
+                  setIsBuyer(false);
+                  return;
+                }
               }
               return;
             });

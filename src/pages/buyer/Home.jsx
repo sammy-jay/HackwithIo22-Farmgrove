@@ -4,29 +4,29 @@ import { Product, FooterBanner, HeroBanner } from "./components";
 const bannerData = [
   {
     discount: "",
-    largeText1: "HEADPHONES",
+    largeText1: "ONIONS",
     largeText2: "",
     saleTime: "",
-    smallText: "headphones",
-    midText: "Wireless",
-    desc: "The game begins here. With Immortal 1000D gaming headphones, don’t just play the game - feel it, live it, and own it. Level up your audio game with 7.1 Channel",
-    product: "headphones",
+    smallText: "pepper",
+    midText: "Vegies",
+    desc: "🧅🧅 description here...",
+    product: "onions",
     buttonText: "Shop Now",
     image:
-      "https://cdn.sanity.io/images/kyml1h03/production/a205aaa5ac2c75342801e683c3b78ea2fff8913b-600x600.webp",
+      "https://images.pexels.com/photos/2280569/pexels-photo-2280569.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   {
-    discount: "29% OFF",
+    discount: "10% OFF",
     largeText1: "Fine",
-    largeText2: "Smile",
+    largeText2: "Carrots",
     saleTime: "29 June to 29 July",
-    smallText: "Beats Solo Air",
-    midText: "Summer Sale",
-    desc: "Tcompany that's grown from 270 to 480 employees in the last 12 months.",
-    product: "headphones",
+    smallText: "...",
+    midText: "Mid year Sale",
+    desc: "🥕🥕 description here...",
+    product: "carrots",
     buttonText: "Shop Now",
     image:
-      "https://cdn.sanity.io/images/kyml1h03/production/a64b345016e96adfb8849af5521c8e0ecfe8f027-555x555.webp",
+      "https://images.pexels.com/photos/1150682/pexels-photo-1150682.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
 ];
 
