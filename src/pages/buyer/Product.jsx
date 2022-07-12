@@ -15,14 +15,14 @@ import { products } from './lib/utils';
 const ProductDetails = () => {
   const {_id} = useParams()
    const [product, setProduct] = useState(null)
-   console.log(product)
+   console.log(typeof _id)
 //   const { imageList, name, details, price } = products.find(p => p._id === _id);
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
   const handleBuyNow = () => {
     onAdd(
-      products.find((p) => p._id === _id),
+      products.find((p) => p._id == _id),
       qty
     );
 
@@ -30,7 +30,7 @@ const ProductDetails = () => {
   };
   
   useEffect(() => {
-    setProduct(() => products.find(p => p._id === _id))
+    setProduct(() => products.find(p => p._id == _id))
   },[])
   
   return (
@@ -92,7 +92,7 @@ const ProductDetails = () => {
               className="add-to-cart"
               onClick={() =>
                 onAdd(
-                  products.find((p) => p._id === _id),
+                  products.find((p) => p._id == _id),
                   qty
                 )
               }
