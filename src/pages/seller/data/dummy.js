@@ -21,7 +21,6 @@ import {
 } from "react-icons/md";
 import {  HiOutlineSpeakerphone } from "react-icons/hi";
 import { TiTick } from "react-icons/ti";
-import { GrLocation } from "react-icons/gr";
 import avatar from "./avatar.jpg";
 import avatar2 from "./avatar2.jpg";
 import avatar3 from "./avatar3.png";
@@ -54,23 +53,7 @@ export const gridOrderStatus = (props) => (
   </button>
 );
 
-const gridEmployeeProfile = (props) => (
-  <div className="flex items-center gap-2">
-    <img
-      className="rounded-full w-10 h-10"
-      src={props.EmployeeImage}
-      alt="employee"
-    />
-    <p>{props.Name}</p>
-  </div>
-);
 
-const gridEmployeeCountry = (props) => (
-  <div className="flex items-center justify-center gap-2">
-    <GrLocation />
-    <span>{props.Country}</span>
-  </div>
-);
 
 const customerGridImage = (props) => (
   <div className="image flex gap-4 ">

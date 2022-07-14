@@ -5,7 +5,6 @@ import {
   addDoc,
   collection,
   doc,
-  serverTimestamp,
   updateDoc,
 } from "@firebase/firestore";
 import { getDownloadURL, ref, uploadString } from "@firebase/storage";
@@ -15,7 +14,7 @@ import { toast } from "react-hot-toast";
 
 const AddProduct = () => {
   const [userId, setUserId] = useState(null);
-  const { currentColor, currentMode } = useStateContext();
+  const { currentColor } = useStateContext();
   const [selectedFile, setSelectedFile] = useState(null);
   const filePickerRef = useRef(null);
   const [formData, setFormData] = useState({

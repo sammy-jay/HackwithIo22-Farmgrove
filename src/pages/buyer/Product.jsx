@@ -20,7 +20,7 @@ const ProductDetails = () => {
 
   const handleBuyNow = () => {
     onAdd(
-      products.find((p) => p._id == _id),
+      products.find((p) => p._id === parseInt(_id)),
       qty
     );
 
@@ -28,7 +28,7 @@ const ProductDetails = () => {
   };
   
   useEffect(() => {
-    setProduct(() => products.find(p => p._id == _id))
+    setProduct(() => products.find((p) => p._id === parseInt(_id)));
   },[_id, index])
   
   return (
@@ -90,7 +90,7 @@ const ProductDetails = () => {
               className="add-to-cart"
               onClick={() =>
                 onAdd(
-                  products.find((p) => p._id == _id),
+                  products.find((p) => p._id === parseInt(_id)),
                   qty
                 )
               }
