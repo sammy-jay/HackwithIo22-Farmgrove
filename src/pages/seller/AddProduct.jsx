@@ -24,6 +24,7 @@ const AddProduct = () => {
     tags: "",
     count: "",
     description: "",
+    imgUrl: "",
   });
 
   useEffect(() => {
@@ -75,6 +76,7 @@ const AddProduct = () => {
         tags: "",
         count: "",
         description: "",
+        imgUrl: "",
       });
     };
 
@@ -91,7 +93,7 @@ const AddProduct = () => {
 
   return (
     <div className="max-w-[1200px] flex lg:mx-auto m-2 w-[95%] md:m-10 mt-24 p-5 md:p-10 space-y-5 lg:space-y-0 lg:space-x-5 flex-col lg:flex-row  ">
-      <div className="flex justify-center items-center w-full">
+      <div className="flex justify-center items-center w-full flex-col">
         {selectedFile ? (
           <div className="relative">
             <div
@@ -146,6 +148,20 @@ const AddProduct = () => {
             />
           </label>
         )}
+        <div className="flex flex-col w-full mt-5">
+            <label htmlFor="imgUrl" className="block mb-3 text-sm  text-gray-500">
+              Product Image Url
+            </label>
+            <input
+              type="text"
+              id="imgUrl"
+              name="imgUrl"
+              value={formData.imgUrl}
+              onChange={handleChange}
+              placeholder="image url"
+              className={`flex-grow border px-3 py-1 dark:border-gray-500 rounded outline-0 focus:outline-0 placeholder:text-sm bg-white text-base focus:ring-2 focus:ring-${currentColor} dark:bg-secondary-dark-bg dark:text-white`}
+            />
+          </div>
       </div>
 
       <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-md shadow-md lg:w-4/6 py-4 px-5 h-[100%]">

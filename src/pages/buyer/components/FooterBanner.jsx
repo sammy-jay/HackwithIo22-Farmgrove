@@ -28,9 +28,9 @@ const FooterBanner = ({
           <p>{smallText}</p>
           <h3>{midText}</h3>
           <p>{desc}</p>
-          <Link to={`/products/${product}`}>
+          {/* <Link to={`/products/${product}`}> */}
             <button type="button">{buttonText}</button>
-          </Link>
+          {/* </Link> */}
         </div>
 
         {/* <img src={image} alt="" className="footer-banner-image" /> */}
