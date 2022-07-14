@@ -1,4 +1,5 @@
 import confetti from "canvas-confetti";
+import hBanner from "./header-banner.png"
 
 export const runFireworks = () => {
   var duration = 5 * 1000;
@@ -39,16 +40,15 @@ export const bannerData = [
     largeText1: "CORN",
     largeText2: "",
     saleTime: "",
-    smallText: "",
-    midText: "grains",
+    smallText: "organic",
+    midText: "fresh",
     desc: "🌽🌽Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam porro quod omnis ducimus provident laborum, id reiciendis perspiciatis fugit",
     product: "corn",
     buttonText: "Shop Now",
     _id: 1004,
     name: "Corn",
     price: 3900,
-    image:
-      "https://images.pexels.com/photos/547263/pexels-photo-547263.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: hBanner,
     slug: "corn",
     details:
       "🌾 🧅 🥕 🥬 👨🏼‍🌾 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam porro quod omnis ducimus provident laborum, id reiciendis perspiciatis fugit, vero, dicta tenetur harum? Doloremque labore dignissimos alias odio quaerat eum.",
